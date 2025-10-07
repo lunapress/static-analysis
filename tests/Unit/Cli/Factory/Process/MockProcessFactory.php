@@ -2,9 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Onepix\WpStaticAnalysis\Tests\Unit\Cli\Factory\Process;
+namespace LunaPress\WpStaticAnalysis\Tests\Unit\Cli\Factory\Process;
 
-use Onepix\WpStaticAnalysis\Cli\Factory\Process\ProcessFactoryInterface;
+use LunaPress\WpStaticAnalysis\Cli\Factory\Process\ProcessFactoryInterface;
+use Override;
 use PHPUnit\Framework\MockObject\MockObject;
 use Symfony\Component\Process\Process;
 
@@ -24,8 +25,8 @@ final class MockProcessFactory implements ProcessFactoryInterface
     /**
      * @inheritDoc
      */
-    #[\Override]
-    public function create(array $command): Process
+    #[Override]
+    public function create(array $command, ?string $cwd = null, ?array $env = null): Process
     {
         return $this->mock;
     }

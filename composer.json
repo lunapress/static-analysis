@@ -1,5 +1,5 @@
 {
-    "name": "onepix/wp-static-analysis",
+    "name": "lunapress/static-analysis",
     "description": "Psalm, PHPCS and Rector configs for use in WP",
     "license": "Apache-2.0",
     "keywords": [
@@ -9,32 +9,36 @@
         "rector",
         "standards",
         "static analysis",
-        "WordPress"
+        "WordPress",
+        "LunaPress"
     ],
     "autoload": {
         "psr-4": {
-            "Onepix\\WpStaticAnalysis\\": "src/"
+            "LunaPress\\WpStaticAnalysis\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Onepix\\WpStaticAnalysis\\Tests\\": "tests/"
+            "LunaPress\\WpStaticAnalysis\\Tests\\": "tests/"
         }
     },
     "authors": [
         {
-            "name": "onepix"
+            "name": "Onepix",
+            "homepage": "https://onepix.net",
+            "role": "Company"
         },
         {
-            "name": "0zd0"
+            "name": "0zd0",
+            "role": "Lead Developer",
+            "homepage": "https://github.com/0zd0"
         }
     ],
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
         "php": "^8.3",
-        "symfony/polyfill-php83": "*",
-        "onepix/wp-coding-standards": "^2",
+        "lunapress/coding-standards": "dev-main",
         "symfony/console": "^7",
         "symfony/process": "^7",
         "vimeo/psalm": "^5 || ^6",
@@ -45,7 +49,7 @@
     "require-dev": {
         "phpunit/phpunit": "^12",
         "mikey179/vfsstream": "^1.6",
-        "psalm/plugin-phpunit": "*"
+        "psalm/plugin-phpunit": "^0"
     },
     "config": {
         "allow-plugins": {
@@ -53,7 +57,7 @@
         }
     },
     "bin": [
-        "bin/wp-static-analysis"
+        "bin/lunapress-static-analysis"
     ],
     "scripts": {
         "fix:cs": "phpcbf",

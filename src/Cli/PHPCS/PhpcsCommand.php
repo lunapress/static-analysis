@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Onepix\WpStaticAnalysis\Cli\PHPCS;
+namespace LunaPress\WpStaticAnalysis\Cli\PHPCS;
 
+use Override;
 use Symfony\Component\Console\Attribute\AsCommand;
 
 /**
@@ -18,7 +19,7 @@ final class PhpcsCommand extends AbstractPhpcsCommand
     /**
      * @inheritDoc
      */
-    #[\Override]
+    #[Override]
     protected function getBinaryName(): string
     {
         return 'phpcs';

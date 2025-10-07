@@ -2,16 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Onepix\WpStaticAnalysis\Tests\Unit\Cli\ConfigLocator;
+namespace LunaPress\WpStaticAnalysis\Tests\Unit\Cli\ConfigLocator;
 
-use Onepix\WpStaticAnalysis\Cli\ConfigLocator\AbstractConfigLocator;
+use LunaPress\WpStaticAnalysis\Cli\ConfigLocator\AbstractConfigLocator;
+use Override;
 
 final class TestableAbstractConfigLocator extends AbstractConfigLocator
 {
     /**
      * @inheritDoc
      */
-    #[\Override]
+    #[Override]
     protected function getProjectConfigPaths(): array
     {
         return [
@@ -22,7 +23,7 @@ final class TestableAbstractConfigLocator extends AbstractConfigLocator
     /**
      * @inheritDoc
      */
-    #[\Override]
+    #[Override]
     protected function getDefaultConfigPath(): string
     {
         return 'defaultPath';

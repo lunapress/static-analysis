@@ -2,9 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Onepix\WpStaticAnalysis\Tests\Integration;
+namespace LunaPress\WpStaticAnalysis\Tests\Integration;
 
-use Onepix\WpStaticAnalysis\Tests\Util\Filesystem;
+use LunaPress\WpStaticAnalysis\Tests\Util\Filesystem;
+use Override;
 use PHPUnit\Framework\TestCase;
 
 final class CliTest extends TestCase
@@ -12,7 +13,7 @@ final class CliTest extends TestCase
     private static string $projectRoot;
     private static string $binPath;
 
-    #[\Override]
+    #[Override]
     public static function setUpBeforeClass(): void
     {
         parent::setUpBeforeClass();
@@ -24,7 +25,7 @@ final class CliTest extends TestCase
         exec("composer install -d " . self::$projectRoot . " --no-interaction", $output, $code);
         self::assertEquals(0, $code, 'Project dependencies install failed');
 
-        self::$binPath = self::$projectRoot . '/vendor/bin/wp-static-analysis';
+        self::$binPath = self::$projectRoot . '/vendor/bin/lunapress-static-analysis';
     }
 
     public function testExecuteSuccessful(): void
@@ -41,7 +42,7 @@ final class CliTest extends TestCase
         $this->assertStringContainsString('ERROR', implode("\n", $output));
     }
 
-    #[\Override]
+    #[Override]
     public static function tearDownAfterClass(): void
     {
         Filesystem::deleteFolder(self::$projectRoot . '/vendor');

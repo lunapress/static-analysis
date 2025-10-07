@@ -2,9 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Onepix\WpStaticAnalysis\Cli\PHPCS;
+namespace LunaPress\WpStaticAnalysis\Cli\PHPCS;
 
-use Onepix\WpStaticAnalysis\Cli\Command\AbstractToolCommand;
+use LunaPress\WpStaticAnalysis\Cli\Command\AbstractToolCommand;
+use Override;
 use Symfony\Component\Console\Exception\LogicException;
 
 abstract class AbstractPhpcsCommand extends AbstractToolCommand
@@ -23,7 +24,7 @@ abstract class AbstractPhpcsCommand extends AbstractToolCommand
     /**
      * @inheritDoc
      */
-    #[\Override]
+    #[Override]
     protected function getConfigOptionName(): string
     {
         return 'ruleset';
@@ -32,7 +33,7 @@ abstract class AbstractPhpcsCommand extends AbstractToolCommand
     /**
      * @inheritDoc
      */
-    #[\Override]
+    #[Override]
     protected function getToolConfigFlag(): string
     {
         return '--standard=';
@@ -41,7 +42,7 @@ abstract class AbstractPhpcsCommand extends AbstractToolCommand
     /**
      * @inheritDoc
      */
-    #[\Override]
+    #[Override]
     protected function getToolArgumentsDescription(): string
     {
         return 'Spell out any arguments related to PHPCS with a space';
@@ -50,7 +51,7 @@ abstract class AbstractPhpcsCommand extends AbstractToolCommand
     /**
      * @inheritDoc
      */
-    #[\Override]
+    #[Override]
     protected function getConfigOptionDescription(): string
     {
         return 'Path to custom phpcs.xml relative to project root';

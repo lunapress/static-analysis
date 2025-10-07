@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Onepix\WpStaticAnalysis\Tests\Unit\Cli\Factory\Process;
+namespace LunaPress\WpStaticAnalysis\Tests\Unit\Cli\Factory\Process;
 
-use Onepix\WpStaticAnalysis\Cli\Factory\Process\DefaultProcessFactory;
+use LunaPress\WpStaticAnalysis\Cli\Factory\Process\DefaultProcessFactory;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 

@@ -2,10 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Onepix\WpStaticAnalysis\Tests\Unit\Cli\Command;
+namespace LunaPress\WpStaticAnalysis\Tests\Unit\Cli\Command;
 
-use Onepix\WpStaticAnalysis\Cli\Command\AbstractCommand;
-use Onepix\WpStaticAnalysis\Cli\Factory\Process\ProcessFactoryInterface;
+use LunaPress\WpStaticAnalysis\Cli\Command\AbstractCommand;
+use LunaPress\WpStaticAnalysis\Cli\Factory\Process\ProcessFactoryInterface;
+use Override;
 
 /**
  * Implementation of AbstractCommand for testing purposes.
@@ -19,7 +20,7 @@ final class TestableAbstractCommand extends AbstractCommand
     /**
      * @inheritDoc
      */
-    #[\Override]
+    #[Override]
     protected function getBinaryName(): string
     {
         return self::BIN;

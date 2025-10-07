@@ -1,4 +1,4 @@
-name: onepix-wp-static-analysis
+name: lunapress-static-analysis
 
 services:
   php:

@@ -2,10 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Onepix\WpStaticAnalysis\Tests\Unit\Cli\ConfigLocator;
+namespace LunaPress\WpStaticAnalysis\Tests\Unit\Cli\ConfigLocator;
 
-use Onepix\WpStaticAnalysis\Cli\ConfigLocator\AbstractConfigLocator;
+use LunaPress\WpStaticAnalysis\Cli\ConfigLocator\AbstractConfigLocator;
 use org\bovigo\vfs\vfsStream;
+use Override;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 use RuntimeException;
@@ -22,7 +23,7 @@ final class AbstractConfigLocatorTest extends TestCase
     /**
      * @inheritDoc
      */
-    #[\Override]
+    #[Override]
     protected function setUp(): void
     {
         parent::setUp();

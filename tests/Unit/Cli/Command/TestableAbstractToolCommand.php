@@ -2,9 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Onepix\WpStaticAnalysis\Tests\Unit\Cli\Command;
+namespace LunaPress\WpStaticAnalysis\Tests\Unit\Cli\Command;
 
-use Onepix\WpStaticAnalysis\Cli\Command\AbstractToolCommand;
+use LunaPress\WpStaticAnalysis\Cli\Command\AbstractToolCommand;
+use Override;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -16,7 +17,7 @@ final class TestableAbstractToolCommand extends AbstractToolCommand
     /**
      * @inheritDoc
      */
-    #[\Override]
+    #[Override]
     protected function getBinaryName(): string
     {
         return self::BINARY_NAME;
@@ -25,7 +26,7 @@ final class TestableAbstractToolCommand extends AbstractToolCommand
     /**
      * @inheritDoc
      */
-    #[\Override]
+    #[Override]
     protected function getToolConfigFlag(): string
     {
         return self::CONFIG_FLAG;
@@ -34,7 +35,7 @@ final class TestableAbstractToolCommand extends AbstractToolCommand
     /**
      * @inheritDoc
      */
-    #[\Override]
+    #[Override]
     protected function getConfigOptionDescription(): string
     {
         return '';
@@ -43,7 +44,7 @@ final class TestableAbstractToolCommand extends AbstractToolCommand
     /**
      * @inheritDoc
      */
-    #[\Override]
+    #[Override]
     protected function getToolArgumentsDescription(): string
     {
         return '';

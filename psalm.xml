@@ -13,7 +13,7 @@
     <projectFiles>
         <directory name="src"/>
         <directory name="tests"/>
-        <file name="bin/wp-static-analysis"/>
+        <file name="bin/lunapress-static-analysis"/>
         <ignoreFiles allowMissingFiles="true">
             <directory name="vendor"/>
             <directory name=".phpunit.cache"/>

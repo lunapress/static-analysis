@@ -2,10 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Onepix\WpStaticAnalysis\Tests\Unit\Cli\Psalm;
+namespace LunaPress\WpStaticAnalysis\Tests\Unit\Cli\Psalm;
 
-use Onepix\WpStaticAnalysis\Cli\ConfigLocator\ConfigLocatorInterface;
-use Onepix\WpStaticAnalysis\Cli\Psalm\AbstractPsalmCommand;
+use LunaPress\WpStaticAnalysis\Cli\ConfigLocator\ConfigLocatorInterface;
+use LunaPress\WpStaticAnalysis\Cli\Psalm\AbstractPsalmCommand;
+use Override;
 
 final class TestableAbstractPsalmCommand extends AbstractPsalmCommand
 {
@@ -16,7 +17,7 @@ final class TestableAbstractPsalmCommand extends AbstractPsalmCommand
      *
      * @psalm-return 'test'
      */
-    #[\Override]
+    #[Override]
     protected function getBinaryName(): string
     {
         return self::BIN;
@@ -33,7 +34,7 @@ final class TestableAbstractPsalmCommand extends AbstractPsalmCommand
     /**
      * @return string
      */
-    #[\Override]
+    #[Override]
     public function getConfigOptionName(): string
     {
         return parent::getConfigOptionName();
@@ -42,7 +43,7 @@ final class TestableAbstractPsalmCommand extends AbstractPsalmCommand
     /**
      * @return string
      */
-    #[\Override]
+    #[Override]
     public function getToolConfigFlag(): string
     {
         return parent::getToolConfigFlag();
@@ -51,7 +52,7 @@ final class TestableAbstractPsalmCommand extends AbstractPsalmCommand
     /**
      * @return string
      */
-    #[\Override]
+    #[Override]
     public function getToolArgumentsDescription(): string
     {
         return parent::getToolArgumentsDescription();
@@ -60,7 +61,7 @@ final class TestableAbstractPsalmCommand extends AbstractPsalmCommand
     /**
      * @return string
      */
-    #[\Override]
+    #[Override]
     public function getConfigOptionDescription(): string
     {
         return parent::getConfigOptionDescription();

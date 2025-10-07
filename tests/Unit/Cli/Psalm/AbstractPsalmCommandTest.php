@@ -2,10 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Onepix\WpStaticAnalysis\Tests\Unit\Cli\Psalm;
+namespace LunaPress\WpStaticAnalysis\Tests\Unit\Cli\Psalm;
 
-use Onepix\WpStaticAnalysis\Cli\Psalm\AbstractPsalmCommand;
-use Onepix\WpStaticAnalysis\Cli\Psalm\PsalmConfigLocator;
+use LunaPress\WpStaticAnalysis\Cli\Psalm\AbstractPsalmCommand;
+use LunaPress\WpStaticAnalysis\Cli\Psalm\PsalmConfigLocator;
+use Override;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 
@@ -17,7 +18,7 @@ final class AbstractPsalmCommandTest extends TestCase
 {
     private TestableAbstractPsalmCommand $command;
 
-    #[\Override]
+    #[Override]
     protected function setUp(): void
     {
         parent::setUp();

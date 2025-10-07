@@ -2,12 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Onepix\WpStaticAnalysis\Tests\Unit\Cli\Command;
+namespace LunaPress\WpStaticAnalysis\Tests\Unit\Cli\Command;
 
-use Onepix\WpStaticAnalysis\Cli\Command\AbstractToolCommand;
-use Onepix\WpStaticAnalysis\Cli\ConfigLocator\ConfigLocatorInterface;
-use Onepix\WpStaticAnalysis\Cli\Factory\Process\ProcessFactoryInterface;
+use LunaPress\WpStaticAnalysis\Cli\Command\AbstractToolCommand;
+use LunaPress\WpStaticAnalysis\Cli\ConfigLocator\ConfigLocatorInterface;
+use LunaPress\WpStaticAnalysis\Cli\Factory\Process\ProcessFactoryInterface;
 use org\bovigo\vfs\vfsStream;
+use Override;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\MockObject\Exception;
 use PHPUnit\Framework\MockObject\MockObject;
@@ -34,7 +35,7 @@ final class AbstractToolCommandTest extends TestCase
      * @return void
      * @throws Exception
      */
-    #[\Override]
+    #[Override]
     protected function setUp(): void
     {
         $this->command = new TestableAbstractToolCommand();

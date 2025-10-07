@@ -2,9 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Onepix\WpStaticAnalysis\Cli\Psalm;
+namespace LunaPress\WpStaticAnalysis\Cli\Psalm;
 
-use Onepix\WpStaticAnalysis\Cli\Command\AbstractToolCommand;
+use LunaPress\WpStaticAnalysis\Cli\Command\AbstractToolCommand;
+use Override;
 use Symfony\Component\Console\Exception\LogicException;
 
 abstract class AbstractPsalmCommand extends AbstractToolCommand
@@ -24,7 +25,7 @@ abstract class AbstractPsalmCommand extends AbstractToolCommand
     /**
      * @inheritDoc
      */
-    #[\Override]
+    #[Override]
     protected function getToolConfigFlag(): string
     {
         return '--config=';
@@ -33,7 +34,7 @@ abstract class AbstractPsalmCommand extends AbstractToolCommand
     /**
      * @inheritDoc
      */
-    #[\Override]
+    #[Override]
     protected function getToolArgumentsDescription(): string
     {
         return 'Write all Psalm-related arguments with a space in them';
@@ -42,7 +43,7 @@ abstract class AbstractPsalmCommand extends AbstractToolCommand
     /**
      * @inheritDoc
      */
-    #[\Override]
+    #[Override]
     protected function getConfigOptionDescription(): string
     {
         return 'Path to custom psalm.xml relative to the project root';

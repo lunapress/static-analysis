@@ -5,12 +5,12 @@ declare(strict_types=1);
 /** @psalm-suppress UnresolvableInclude */
 include $_composer_autoload_path ?? __DIR__ . '/../vendor/autoload.php';
 
-use Onepix\WpStaticAnalysis\Cli\PHPCS\PhpcbfCommand;
-use Onepix\WpStaticAnalysis\Cli\PHPCS\PhpcsCommand;
-use Onepix\WpStaticAnalysis\Cli\Psalm\PsalmCommand;
+use LunaPress\WpStaticAnalysis\Cli\PHPCS\PhpcbfCommand;
+use LunaPress\WpStaticAnalysis\Cli\PHPCS\PhpcsCommand;
+use LunaPress\WpStaticAnalysis\Cli\Psalm\PsalmCommand;
 use Symfony\Component\Console\Application;
 
-$app = new Application('Onepix WP Static Analysis', '1.0.0');
+$app = new Application('LunaPress WP Static Analysis', '1.0.0');
 try {
     $app->add(new PhpcsCommand());
     $app->add(new PhpcbfCommand());

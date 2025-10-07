@@ -12,12 +12,12 @@
         {
             "type": "composer",
             "url": "https://packagist.org",
-            "exclude": ["onepix/wp-static-analysis"]
+            "exclude": ["lunapress/static-analysis"]
         }
     ],
     "require": {
-        "php": "^8.1",
-        "onepix/wp-static-analysis": "@dev"
+        "php": "^8.3",
+        "lunapress/static-analysis": "@dev"
     },
     "config": {
         "lock": false,

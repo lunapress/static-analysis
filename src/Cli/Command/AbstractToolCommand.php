@@ -2,9 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Onepix\WpStaticAnalysis\Cli\Command;
+namespace LunaPress\WpStaticAnalysis\Cli\Command;
 
-use Onepix\WpStaticAnalysis\Cli\ConfigLocator\ConfigLocatorInterface;
+use LunaPress\WpStaticAnalysis\Cli\ConfigLocator\ConfigLocatorInterface;
+use Override;
 use RuntimeException;
 use Symfony\Component\Console\Exception\InvalidArgumentException;
 use LogicException;
@@ -67,7 +68,7 @@ abstract class AbstractToolCommand extends AbstractCommand
      * @inheritDoc
      * @throws InvalidArgumentException
      */
-    #[\Override]
+    #[Override]
     protected function configure(): void
     {
         $this
@@ -91,7 +92,7 @@ abstract class AbstractToolCommand extends AbstractCommand
      * @throws \Symfony\Component\Process\Exception\LogicException
      * @throws InvalidArgumentException
      */
-    #[\Override]
+    #[Override]
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         /** @var string|null $customConfigFile */

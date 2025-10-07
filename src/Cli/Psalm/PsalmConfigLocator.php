@@ -2,17 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Onepix\WpStaticAnalysis\Cli\Psalm;
+namespace LunaPress\WpStaticAnalysis\Cli\Psalm;
 
-use Onepix\WpStaticAnalysis\Cli\ConfigLocator\AbstractConfigLocator;
-use Onepix\WpStaticAnalysis\Util\Package;
+use LunaPress\WpStaticAnalysis\Cli\ConfigLocator\AbstractConfigLocator;
+use LunaPress\WpStaticAnalysis\Util\Package;
+use Override;
 
 final class PsalmConfigLocator extends AbstractConfigLocator
 {
     /**
      * @inheritDoc
      */
-    #[\Override]
+    #[Override]
     protected function getDefaultConfigPath(): string
     {
         return Package::ROOT_DIR . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'psalm.xml';
@@ -21,7 +22,7 @@ final class PsalmConfigLocator extends AbstractConfigLocator
     /**
      * @inheritDoc
      */
-    #[\Override]
+    #[Override]
     protected function getProjectConfigPaths(): array
     {
         return [

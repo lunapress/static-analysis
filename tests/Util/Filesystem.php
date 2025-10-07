@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Onepix\WpStaticAnalysis\Tests\Util;
+namespace LunaPress\WpStaticAnalysis\Tests\Util;
 
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;

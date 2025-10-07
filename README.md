@@ -1,14 +1,14 @@
-# WP Static Analysis
+# LunaPress Static Analysis
 
 ### TODO
 
-- [ ] Psalm plugin for autoregistration of installed `onepix/*-stubs`
+- [ ] Psalm plugin for autoregistration of installed `lunapress/*-stubs`
 - [ ] Rector CLI
 
 ### Install
 
 ```shell
-composer require --dev onepix/wp-static-analysis
+composer require --dev lunapress/static-analysis
 ```
 
 ### Required
@@ -20,11 +20,11 @@ composer require --dev onepix/wp-static-analysis
 ### PHP_CodeSniffer
 
 ```shell
-vendor/bin/wp-static-analysis phpcs [OPTIONS] -- [<PHPCS-ARGS>...]
+vendor/bin/lunapress-static-analysis phpcs [OPTIONS] -- [<PHPCS-ARGS>...]
 ```
 
 ```shell
-vendor/bin/wp-static-analysis phpcbf [OPTIONS] -- [<PHPCS-ARGS>...]
+vendor/bin/lunapress-static-analysis phpcbf [OPTIONS] -- [<PHPCS-ARGS>...]
 ```
 
 `[PHPCS-ARGS]`: Arguments from [PHP_CodeSniffer](https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Usage)
@@ -39,12 +39,12 @@ If `--ruleset` is not present, it checks the files in order of priority:
 2. `.config/phpcs.xml`
 3. `.config/.phpcs.xml.dist`
 4. `.config/phpcs.xml.dist`
-5. `WpOnepixStandard` is automatically applied
+5. `LunaPressStandard` is automatically applied
 
 #### Example
 
 ```
-vendor/bin/wp-static-analysis phpcs --ruleset=./phpcs/example.xml -- --colors
+vendor/bin/lunapress-static-analysis phpcs --ruleset=./phpcs/example.xml -- --colors
 ```
 
 #### Overriding rules
@@ -52,8 +52,8 @@ vendor/bin/wp-static-analysis phpcs --ruleset=./phpcs/example.xml -- --colors
 `.config/phpcs.xml`
 ```xml
 <?xml version="1.0"?>
-<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Onepix WP Standard Override" namespace="WpOnepixStandardOverride" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/squizlabs/PHP_CodeSniffer/master/phpcs.xsd">
-    <rule ref="WpOnepixStandard">
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="LunaPress Standard Override" namespace="LunaPressStandard\Override" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/squizlabs/PHP_CodeSniffer/master/phpcs.xsd">
+    <rule ref="LunaPressStandard">
     </rule>
 
     <!-- Arguments -->
@@ -68,7 +68,7 @@ vendor/bin/wp-static-analysis phpcs --ruleset=./phpcs/example.xml -- --colors
 ### Psalm
 
 ```shell
-vendor/bin/wp-static-analysis psalm [OPTIONS] -- [<PSALM-ARGS>...]
+vendor/bin/lunapress-static-analysis psalm [OPTIONS] -- [<PSALM-ARGS>...]
 ```
 
 `[PSALM-ARGS]`: Arguments from [Psalm](https://psalm.dev/docs/running_psalm/command_line_usage/)
@@ -86,5 +86,5 @@ If `--config` is not present, it checks the files in order of priority:
 #### Example
 
 ```
-vendor/bin/wp-static-analysis psalm --config=./phpcs/example.xml -- --help
+vendor/bin/lunapress-static-analysis psalm --config=./phpcs/example.xml -- --help
 ```

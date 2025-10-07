@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Onepix\WpStaticAnalysis\Cli\Psalm;
+namespace LunaPress\WpStaticAnalysis\Cli\Psalm;
 
-use Onepix\WpStaticAnalysis\Cli\Psalm\AbstractPsalmCommand;
+use Override;
 use Symfony\Component\Console\Attribute\AsCommand;
 
 #[AsCommand(
@@ -16,7 +16,7 @@ final class PsalmCommand extends AbstractPsalmCommand
     /**
      * @inheritDoc
      */
-    #[\Override]
+    #[Override]
     protected function getBinaryName(): string
     {
         return 'psalm';

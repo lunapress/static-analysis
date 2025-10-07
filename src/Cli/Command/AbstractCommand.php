@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Onepix\WpStaticAnalysis\Cli\Command;
+namespace LunaPress\WpStaticAnalysis\Cli\Command;
 
-use Onepix\WpStaticAnalysis\Cli\Factory\Process\DefaultProcessFactory;
-use Onepix\WpStaticAnalysis\Cli\Factory\Process\ProcessFactoryInterface;
+use LunaPress\WpStaticAnalysis\Cli\Factory\Process\DefaultProcessFactory;
+use LunaPress\WpStaticAnalysis\Cli\Factory\Process\ProcessFactoryInterface;
 use RuntimeException;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Exception\LogicException;

@@ -2,12 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Onepix\WpStaticAnalysis\Tests\Unit\Cli\Command;
+namespace LunaPress\WpStaticAnalysis\Tests\Unit\Cli\Command;
 
-use Onepix\WpStaticAnalysis\Cli\Command\AbstractCommand;
-use Onepix\WpStaticAnalysis\Cli\Factory\Process\ProcessFactoryInterface;
-use Onepix\WpStaticAnalysis\Tests\Util\Filesystem;
+use LunaPress\WpStaticAnalysis\Cli\Command\AbstractCommand;
+use LunaPress\WpStaticAnalysis\Cli\Factory\Process\ProcessFactoryInterface;
+use LunaPress\WpStaticAnalysis\Tests\Util\Filesystem;
 use org\bovigo\vfs\vfsStream;
+use Override;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\MockObject\Exception;
 use PHPUnit\Framework\TestCase;
@@ -27,7 +28,7 @@ final class AbstractCommandTest extends TestCase
     /**
      * @inheritDoc
      */
-    #[\Override]
+    #[Override]
     protected function setUp(): void
     {
         parent::setUp();

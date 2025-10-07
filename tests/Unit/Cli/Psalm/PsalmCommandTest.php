@@ -2,10 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Onepix\WpStaticAnalysis\Tests\Unit\Cli\Psalm;
+namespace LunaPress\WpStaticAnalysis\Tests\Unit\Cli\Psalm;
 
-use Onepix\WpStaticAnalysis\Cli\Psalm\PsalmCommand;
-use Onepix\WpStaticAnalysis\Tests\Util\ExposeProtectedMethods;
+use LunaPress\WpStaticAnalysis\Cli\Psalm\PsalmCommand;
+use LunaPress\WpStaticAnalysis\Tests\Util\ExposeProtectedMethods;
+use Override;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 use ReflectionException;
@@ -23,7 +24,7 @@ final class PsalmCommandTest extends TestCase
     /**
      * @inheritDoc
      */
-    #[\Override]
+    #[Override]
     protected function setUp(): void
     {
         parent::setUp();

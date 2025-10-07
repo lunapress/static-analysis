@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Onepix\WpStaticAnalysis\Cli\ConfigLocator;
+namespace LunaPress\WpStaticAnalysis\Cli\ConfigLocator;
 
+use Override;
 use RuntimeException;
 
 abstract class AbstractConfigLocator implements ConfigLocatorInterface
@@ -20,7 +21,7 @@ abstract class AbstractConfigLocator implements ConfigLocatorInterface
      * @inheritDoc
      * @throws RuntimeException If custom standard is specified but not found
      */
-    #[\Override]
+    #[Override]
     public function locate(
         ?string $customFile = null
     ): string {

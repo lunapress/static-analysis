@@ -2,10 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Onepix\WpStaticAnalysis\Tests\Unit\Cli\PHPCS;
+namespace LunaPress\WpStaticAnalysis\Tests\Unit\Cli\PHPCS;
 
-use Onepix\WpStaticAnalysis\Cli\PHPCS\AbstractPhpcsCommand;
-use Onepix\WpStaticAnalysis\Cli\PHPCS\StandardLocator;
+use LunaPress\WpStaticAnalysis\Cli\PHPCS\AbstractPhpcsCommand;
+use LunaPress\WpStaticAnalysis\Cli\PHPCS\StandardLocator;
+use Override;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 
@@ -17,7 +18,7 @@ final class AbstractPhpcsCommandTest extends TestCase
 {
     private TestableAbstractPhpcsCommand $command;
 
-    #[\Override]
+    #[Override]
     protected function setUp(): void
     {
         parent::setUp();

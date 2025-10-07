@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ruleset name="WpStaticAnalysis">
+<ruleset name="LunaPressStaticAnalysis">
     <rule ref="PSR12"/>
 
     <arg name="extensions" value="php" />

@@ -2,9 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Onepix\WpStaticAnalysis\Cli\PHPCS;
+namespace LunaPress\WpStaticAnalysis\Cli\PHPCS;
 
-use Onepix\WpStaticAnalysis\Cli\ConfigLocator\AbstractConfigLocator;
+use LunaPress\WpStaticAnalysis\Cli\ConfigLocator\AbstractConfigLocator;
+use Override;
 
 /**
  * Locates PHPCS standard files with fallback to default standard
@@ -14,7 +15,7 @@ final class StandardLocator extends AbstractConfigLocator
     /**
      * @inheritDoc
      */
-    #[\Override]
+    #[Override]
     protected function getProjectConfigPaths(): array
     {
         return [
@@ -28,7 +29,7 @@ final class StandardLocator extends AbstractConfigLocator
     /**
      * @inheritDoc
      */
-    #[\Override]
+    #[Override]
     protected function getDefaultConfigPath(): string
     {
         return 'WpOnepixStandard';

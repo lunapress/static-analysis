@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Onepix\WpStaticAnalysis\Cli\Factory\Process;
+namespace LunaPress\WpStaticAnalysis\Cli\Factory\Process;
 
 use Override;
 use Symfony\Component\Process\Exception\InvalidArgumentException;

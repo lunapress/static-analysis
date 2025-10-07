@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Onepix\WpStaticAnalysis\Cli\ConfigLocator;
+namespace LunaPress\WpStaticAnalysis\Cli\ConfigLocator;
 
 interface ConfigLocatorInterface
 {

@@ -1,10 +1,11 @@
 <?php
 
-namespace Onepix\WpStaticAnalysis\Tests\Unit\Cli\PHPCS;
+namespace LunaPress\WpStaticAnalysis\Tests\Unit\Cli\PHPCS;
 
-use Onepix\WpStaticAnalysis\Cli\Command\AbstractCommand;
-use Onepix\WpStaticAnalysis\Cli\PHPCS\PhpcbfCommand;
-use Onepix\WpStaticAnalysis\Tests\Util\ExposeProtectedMethods;
+use LunaPress\WpStaticAnalysis\Cli\Command\AbstractCommand;
+use LunaPress\WpStaticAnalysis\Cli\PHPCS\PhpcbfCommand;
+use LunaPress\WpStaticAnalysis\Tests\Util\ExposeProtectedMethods;
+use Override;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 use ReflectionException;
@@ -23,7 +24,7 @@ final class PhpcbfCommandTest extends TestCase
     /**
      * @inheritDoc
      */
-    #[\Override]
+    #[Override]
     protected function setUp(): void
     {
         parent::setUp();

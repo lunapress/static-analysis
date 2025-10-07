@@ -2,11 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Onepix\WpStaticAnalysis\Tests\Unit\Cli\PHPCS;
+namespace LunaPress\WpStaticAnalysis\Tests\Unit\Cli\PHPCS;
 
-use Onepix\WpStaticAnalysis\Cli\PHPCS\StandardLocator;
-use Onepix\WpStaticAnalysis\Tests\Util\ExposeProtectedMethods;
+use LunaPress\WpStaticAnalysis\Cli\PHPCS\StandardLocator;
+use LunaPress\WpStaticAnalysis\Tests\Util\ExposeProtectedMethods;
 use org\bovigo\vfs\vfsStream;
+use Override;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 use ReflectionClass;
@@ -26,7 +27,7 @@ final class StandardLocatorTest extends TestCase
     /**
      * @inheritDoc
      */
-    #[\Override]
+    #[Override]
     protected function setUp(): void
     {
         parent::setUp();

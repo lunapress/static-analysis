@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Onepix\WpStaticAnalysis\Util;
+namespace LunaPress\WpStaticAnalysis\Util;
 
 final class Package
 {
-    public const ROOT_DIR = __DIR__ . '/wp-static-analysis';
+    public const string ROOT_DIR = __DIR__ . '/wp-static-analysis';
 }

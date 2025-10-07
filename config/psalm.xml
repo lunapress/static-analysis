@@ -2,20 +2,16 @@
 <psalm
         checkForThrowsDocblock="true"
         checkForThrowsInGlobalScope="true"
-        disableSuppressAll="true"
         ensureArrayStringOffsetsExist="true"
         errorLevel="1"
-        findUnusedBaselineEntry="true"
-        findUnusedCode="true"
         findUnusedPsalmSuppress="true"
         findUnusedVariablesAndParams="true"
         memoizeMethodCallResults="true"
-        sealAllMethods="true"
-        sealAllProperties="true"
+        resolveFromConfigFile="false"
         cacheDirectory="var/psalm"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xmlns="https://getpsalm.org/schema/config"
-        xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
+        xsi:schemaLocation="https://getpsalm.org/schema/config ../vendor/vimeo/psalm/config.xsd"
 >
     <projectFiles>
         <directory name="src" />

@@ -1,5 +1,5 @@
 {
-    "name": "Onepix WP Static Analysis",
+    "name": "LunaPress Static Analysis",
     "dockerComposeFile": [
         "./docker-compose.yml"
     ],
