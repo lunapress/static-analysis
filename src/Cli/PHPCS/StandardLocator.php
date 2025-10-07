@@ -32,6 +32,6 @@ final class StandardLocator extends AbstractConfigLocator
     #[Override]
     protected function getDefaultConfigPath(): string
     {
-        return 'WpOnepixStandard';
+        return 'LunaPressStandard';
     }
 }
